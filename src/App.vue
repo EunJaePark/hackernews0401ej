@@ -32,7 +32,6 @@ export default {
 .NewsPaper{ 
   border:3px solid #353434;
   width:90%; max-width:800px;
-  height:800px;
   margin:0 auto;
   padding:30px 50px;
   background-color:#e7e7e6;
