@@ -17,7 +17,7 @@ export default {
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,600,900&display=swap');
 #app {
   font-family: 'Noto Sans KR', sans-serif;
   -webkit-font-smoothing: sans-serif/*antialiased*/;
@@ -46,4 +46,12 @@ export default {
    #app{ padding:20px; }
  }
 
+
+ ol{ padding:20px; list-style-type:decimal-leading-zero; list-style-position:inside }
+ ol > li{ margin-bottom:30px; padding:10px 20px; background-color:rgba(53, 52, 52, .3);  } 
+ ol > li > a{ color:#353434; font-size:20px; font-weight:600; text-decoration:none;  }
+ ol > li > a:hover{ text-decoration:underline;  }
+ ol > li > span{ margin-left:25px; display:block; }
+ ol > li > span.time{  }
+ ol > li > span.user{  }
 </style>

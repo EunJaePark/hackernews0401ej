@@ -2,8 +2,8 @@
   <ol>news
         <li v-for="item in list" :key="item.id">
           <a :href="item.url" class="title">{{ item.title }}</a>
-          <span class="time">{{item.time_ago}}</span>
           <span class="user">by {{ item.user }}</span>
+          <span class="time">{{item.time_ago}}</span>
         </li>
   </ol>
 

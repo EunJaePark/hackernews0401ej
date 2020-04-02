@@ -4,7 +4,7 @@ const config = {
     baseUrl: "https://api.hnpwa.com/v0/" 
   };
 
-function fetchListItem(pageName) {
+function fetchListItem(pageName, click) {
     return axios.get(`${config.baseUrl}${pageName}/1.json`);
 }
 
