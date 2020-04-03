@@ -1,8 +1,11 @@
 <template>
-  <ol>ask
+  <ol>
       <li v-for="item in list" :key="item.id">
-          <a :href="item.url">{{ item.title }}</a>
-          <span class="user">by {{ item.user }}</span>
+          <router-link :to="`/item/${item.id}`">{{ item.title }}</router-link>
+          <router-link 
+            class="comments"
+            :to="`/item/${item.id}`"> ( {{ item.comments_count }} )</router-link>
+          <span class="user">by <span>{{ item.user }}</span></span>
           <span class="time">{{ item.time_ago }}</span>
       </li>
   </ol>

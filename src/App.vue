@@ -25,6 +25,7 @@ export default {
   font-size:15px;
   font-weight:400;
   
+  min-height:100vh;
   margin:-8px;
   padding:50px;
   background-color:#616060;
@@ -54,4 +55,6 @@ export default {
  ol > li > span{ margin-left:25px; display:block; }
  ol > li > span.time{  }
  ol > li > span.user{  }
+ ol > li > span.user > span{ font-weight:600; }
+ ol > li > .comments{ font-weight:400; font-size:15px; }
 </style>

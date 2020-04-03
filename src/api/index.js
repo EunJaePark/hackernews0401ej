@@ -1,11 +1,18 @@
-import axios from 'axios'
+import axios from 'axios' 
 
 const config = {
     baseUrl: "https://api.hnpwa.com/v0/" 
   };
 
-function fetchListItem(pageName, click) {
+function fetchListItem(pageName, /*click*/) {
     return axios.get(`${config.baseUrl}${pageName}/1.json`);
 }
 
-export { fetchListItem } 
+function fetchCommentItem(commentId) {
+  return axios.get(`${config.baseUrl}item/${commentId}.json`);
+}
+
+export { 
+  fetchListItem ,
+  fetchCommentItem
+} 

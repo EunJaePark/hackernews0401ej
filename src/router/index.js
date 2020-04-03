@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import NewsView from '../views/NewsView.vue'
 import AskView from '../views/AskView.vue'
 import JobsView from '../views/JobsView.vue'
+import CommentsView from '../views/CommentsView.vue'
 
 Vue.use(VueRouter)
 
@@ -26,6 +27,11 @@ const routes = [
     path: '/jobs',
     name: 'jobs',
     component: JobsView
+  },
+  {
+    path: '/item/:id',
+    name: 'comments',
+    component: CommentsView
   }
 ]
 
