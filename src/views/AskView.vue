@@ -1,5 +1,10 @@
 <template>
   <ol>
+    <div class="loading">
+        <span>loading...</span>
+        <div class="loadingBar"></div>
+    </div>
+
       <li v-for="item in list" :key="item.id">
           <router-link :to="`/item/${item.id}`">{{ item.title }}</router-link>
           <router-link 
@@ -21,6 +26,21 @@ export default {
     },
     created() {
         this.$store.dispatch('FETCH_LIST', 'ask')
+    },
+    mounted() { //beforeUpdate()
+        let loading = document.querySelector('.loading');
+        let routerView = document.querySelector('ol');
+        let loadingBar = document.querySelector('.loadingBar')
+        
+        requestAnimationFrame(function() {
+            setTimeout(function() {
+                loadingBar.style.width = '50%'
+            }, 0)
+        })
+        
+        setTimeout(function() {
+            loading.style.display = 'none';
+        }, 300)
     }
 }
 </script>

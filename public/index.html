@@ -6,12 +6,29 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
     <title><%= htmlWebpackPlugin.options.title %></title>
+
+    <!-- <style>
+      .loadingView{ width:100%; height:100%; background-color:rgba(0, 0, 0, .9); position:absolute; top:0; left:0; color:#fff; }
+    </style> -->
   </head>
   <body>
     <noscript>
       <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
-    <div id="app"></div>
+    
+    <div id="app"><!--<div class="loadingView">loading중입니다!!!!</div>--></div>
     <!-- built files will be auto injected -->
   </body>
+
+  <!-- <script>
+    let app = document.querySelector('#app');
+
+      app.onload = function() {
+      let loadingView = document.querySelector('.loadingView');
+      loadingView.style.opacity = 0;
+      setTimeout(function() {
+        loadingView.style.display = 'none';
+      }, 450)
+    }
+  </script> -->
 </html>

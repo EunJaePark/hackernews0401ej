@@ -23,7 +23,7 @@ export default{
     data() {
         return {
             index: 1,
-            click: 'no'
+            click: 'yes'
         }
     },
     methods: {
